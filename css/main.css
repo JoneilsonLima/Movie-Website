@@ -1,4 +1,5 @@
 @import url('./reset/reset.css');
+@import url('/css/media-query/media_query.css');
 
 /*** HEADER ***/
 
@@ -451,7 +452,7 @@ input:checked + label {
 
 .live-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
@@ -538,4 +539,91 @@ input:checked + label {
 
 .live-card:hover .card-title {
     color: var(--light-azure);
+}
+
+/*** FOOTER SECTION ***/
+footer {
+    background: var(--rich-black-fogra-30);
+    padding: 80px 120px 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--oxford-blue-50);
+    padding-bottom: 80px;
+}
+
+.footer-brand {
+    max-width: 250px;
+    margin-right: 130px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.slogan {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.social-link a {
+    display: inline-block;
+}
+
+.social-link ion-icon {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.footer-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.link-heading {
+    margin-bottom: 20px;
+}
+
+.link-item {
+    font-size: 12px;
+}
+
+ul .link-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.link-item:hover a {
+    color: var(--light-azure);
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.footer-copyright p,
+.wrapper a {
+    font-size: 12px;
+}
+
+.wrapper a:hover {
+    color: var(--light-azure);
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper a:not(:last-child) {
+    margin-right: 30px;
 }
